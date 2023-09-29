@@ -1,6 +1,6 @@
 const Test = () => {
   return <div>Test</div>;
 };
-export default Test;
 
-// root
+// will be used for the root
+export default Test;
