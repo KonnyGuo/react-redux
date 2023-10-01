@@ -1,8 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+// function Greeting() {
+//   return <h2>My First Component</h2>;
+// }
+
+//using jsx
 function Greeting() {
-  return <h2>My First Component</h2>;
+  //provide 3 things, element want to create, props, value inside element
+  // return React.createElement("h2", {}, "First Component");
+  return React.createElement(
+    "div",
+    {},
+    React.createElement("h2", {}, "First Component")
+  );
 }
 
 export default Greeting;
