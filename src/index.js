@@ -5,9 +5,11 @@ import ReactDOM from "react-dom/client";
 //   return <h2>My First Component</h2>;
 // }
 
-//using jsx
+// using jsx, always need to return single element (parent)
+// <></> or <React.Fragment></React.Fragment>
+
 function Greeting() {
-  //provide 3 things, element want to create, props, value inside element
+  // provide 3 things, element want to create, props, value inside element
   // return React.createElement("h2", {}, "First Component");
   return React.createElement(
     "div",
