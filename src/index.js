@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 // using jsx, always need to return single element (parent)
 // <></> or <React.Fragment></React.Fragment>
-
+// no class in react, its className
 const BookList = () => {
   return (
-    <section>
+    <section className="bookList">
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
@@ -15,7 +19,7 @@ const BookList = () => {
 //components
 const Book = () => {
   return (
-    <article>
+    <article className="bookList">
       <Image />
       <Title />
       <Author />
@@ -24,10 +28,12 @@ const Book = () => {
 };
 
 //implict return
-const Image = () => <h2> Image placeholder</h2>;
+const Image = () => (
+  <img src="amazonBookimg1.jpg" alt="How to Catch a Dinosaur" />
+);
 const Title = () => <h2> Book Title</h2>;
 const Author = () => {
-  return <h4> Author </h4>;
+  return <h4> Adam Wallace (Author), Andy Elkerton (Illustrator) </h4>;
 };
 
 //root for html id
