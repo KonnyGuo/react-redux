@@ -8,22 +8,26 @@ import "./index.css";
 function BookList() {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
+      <Book job="developer" />
+      <Book title="new title" />
+      <Book number={5} />
       <Book />
     </section>
   );
 }
 
 //components
-const Book = () => {
+// props are objects, it is only display when value is provided
+const Book = (props) => {
   const title = "How to Catch a Dinosaur";
   return (
     <article className="book">
       <img src="amazonBookimg1.jpg" alt="How to Catch a Dinosaur" />
       <h2> {title} </h2>
       <Author />
+      <p> {props.job}</p>
+      <p> {props.title}</p>
+      <p> {props.number}</p>
     </article>
   );
 };
