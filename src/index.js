@@ -2,16 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+const books = [
+  {
+    author: "Adam Wallace (Author), Andy Elkerton (Illustrator)",
+    title: "How to dinosaur",
+    img: "./amazonBookimg1.jpg",
+  },
+  {
+    author: "James Clear",
+    title: "Atomic Habits",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+  },
+];
 // using jsx, always need to return single element (parent)
 // <></> or <React.Fragment></React.Fragment>
 // no class in react, its className
+// if we want to render something between <Book> </Book> need to use special prop children- name must be like this exactly, is provided by react
 function BookList() {
   return (
     <section className="booklist">
-      <Book job="developer" />
-      <Book title="new title" />
-      <Book number={5} />
-      <Book />
+      {books.map((element) => {
+        return (
+          <div>
+            <h2> {element.author} </h2>
+          </div>
+        );
+      })}
     </section>
   );
 }
@@ -20,29 +36,14 @@ function BookList() {
 // props are objects, it is only display when value is provided
 // {job, title, number} destructure in parameter
 // {job, title, number} = props destructure as variable
-const Book = (props) => {
-  const title = "How to Catch a Dinosaur";
+const Book = ({ img, title, author }) => {
   return (
     <article className="book">
-      <img src="amazonBookimg1.jpg" alt="How to Catch a Dinosaur" />
-      <h2> {title} </h2>
-      <Author />
-      <p> {props.job}</p>
-      <p> {props.title}</p>
-      <p> {props.number}</p>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
     </article>
   );
-};
-
-const Author = () => {
-  const author = "Adam Wallace (Author), Andy Elkerton (Illustrator)";
-  // creating obj instead of passing style directly
-  const inlneHeadingStyles = {
-    color: "#617d98",
-    fontSize: "0.75rem",
-    marginTop: "0.5rem",
-  };
-  return <h4 style={inlneHeadingStyles}>{author}</h4>;
 };
 
 // need {{}} double curlies for objects
