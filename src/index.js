@@ -7,11 +7,13 @@ const books = [
     author: "Adam Wallace (Author), Andy Elkerton (Illustrator)",
     title: "How to dinosaur",
     img: "./amazonBookimg1.jpg",
+    id: 1,
   },
   {
     author: "James Clear",
     title: "Atomic Habits",
     img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+    id: 2,
   },
 ];
 // using jsx, always need to return single element (parent)
@@ -22,9 +24,9 @@ function BookList() {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { img, title, author } = book;
-
-        return <Book key={book.id} img={img} title={title} author={author} />;
+        const { img, title, author, id } = book;
+        // always remember key value to be put somewhere
+        return <Book img={img} title={title} author={author} key={id} />;
       })}
     </section>
   );
