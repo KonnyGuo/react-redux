@@ -18,6 +18,8 @@ function BookList() {
 
 //components
 // props are objects, it is only display when value is provided
+// {job, title, number} destructure in parameter
+// {job, title, number} = props destructure as variable
 const Book = (props) => {
   const title = "How to Catch a Dinosaur";
   return (
