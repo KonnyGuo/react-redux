@@ -33,6 +33,10 @@ function BookList() {
   );
 }
 
+// events obj - common e.target -> refers to element
+// e.target.name -> refers to name = "" thing inside name attribute
+// e.target.value -> refers to value you put into the form, input, etc
+
 //components
 // props are objects, it is only display when value is provided
 // {job, title, number} destructure in parameter
