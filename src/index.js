@@ -24,9 +24,10 @@ function BookList() {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { img, title, author, id } = book;
+        // const { img, title, author, id } = book;
         // always remember key value to be put somewhere
-        return <Book img={img} title={title} author={author} key={id} />;
+        // return <Book img={img} title={title} author={author} key={id} />;
+        return <Book {...book} key={book.id} />;
       })}
     </section>
   );
