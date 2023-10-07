@@ -33,19 +33,24 @@ function BookList() {
   );
 }
 
-// events obj - common e.target -> refers to element
+// events obj - common e.target -> refers to element with all its attributes
 // e.target.name -> refers to name = "" thing inside name attribute
 // e.target.value -> refers to value you put into the form, input, etc
+// e.preventDefault() to handle form submssion by ourself
 
 //components
 // props are objects, it is only display when value is provided
 // {job, title, number} destructure in parameter
 // {job, title, number} = props destructure as variable
 const Book = ({ img, title, author }) => {
+  const displayTitle = () => {
+    console.log(title);
+  };
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
+      <button onClick={displayTitle}> Display Title</button>
       <h4>{author} </h4>
     </article>
   );
