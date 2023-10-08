@@ -21,7 +21,7 @@ const books = [
 // no class in react, its className
 // if we want to render something between <Book> </Book> need to use special prop children- name must be like this exactly, is provided by react
 function BookList() {
-  const someValue = "someValue";
+  const someValue = "someValue123";
   const displayVal = () => {
     console.log(someValue);
   };
