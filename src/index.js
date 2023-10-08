@@ -21,13 +21,17 @@ const books = [
 // no class in react, its className
 // if we want to render something between <Book> </Book> need to use special prop children- name must be like this exactly, is provided by react
 function BookList() {
+  const someValue = "someValue";
+  const displayVal = () => {
+    console.log(someValue);
+  };
   return (
     <section className="booklist">
       {books.map((book) => {
         // const { img, title, author, id } = book;
         // always remember key value to be put somewhere
         // return <Book img={img} title={title} author={author} key={id} />;
-        return <Book {...book} key={book.id} />;
+        return <Book {...book} key={book.id} displayValue={displayVal} />;
       })}
     </section>
   );
@@ -42,15 +46,12 @@ function BookList() {
 // props are objects, it is only display when value is provided
 // {job, title, number} destructure in parameter
 // {job, title, number} = props destructure as variable
-const Book = ({ img, title, author }) => {
-  const displayTitle = () => {
-    console.log(title);
-  };
+const Book = ({ img, title, author, displayValue }) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={displayTitle}> Click this</button>
+      <button onClick={displayValue}> Click this</button>
       <h4>{author} </h4>
     </article>
   );
