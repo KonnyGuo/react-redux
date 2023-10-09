@@ -61,8 +61,6 @@ const Book = ({ img, title, author }) => {
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={}> Click this</button>
-
       {/* <button onClick={getSingleBook}> Click this</button> */}
       {/* <button onClick={() => getBookProp(id)}> Click this</button> */}
       {/* approach 2 above */}
