@@ -52,6 +52,7 @@ function BookList() {
 const Book = ({ img, title, author, getBookProp, id }) => {
   // second component is not get id from first one
   // we are not invoking it with onClick ={getBookProp(id)} and passing it as getSingleBook instead
+  // second method listed below
   const getSingleBook = () => {
     getBookProp(id);
   };
@@ -60,6 +61,9 @@ const Book = ({ img, title, author, getBookProp, id }) => {
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <button onClick={getSingleBook}> Click this</button>
+      {/* <button onClick={() => getBookProp(id)}> Click this</button> */}
+      {/* approach 2 above */}
+
       <h4>{author} </h4>
     </article>
   );
