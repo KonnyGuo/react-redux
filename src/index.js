@@ -23,7 +23,7 @@ const books = [
 function BookList() {
   const getBook = (id) => {
     const bookByID = books.find((element) => {
-      return element.id == id;
+      return element.id === id;
     });
     console.log(bookByID);
     return bookByID;
@@ -49,12 +49,17 @@ function BookList() {
 // props are objects, it is only display when value is provided
 // {job, title, number} destructure in parameter
 // {job, title, number} = props destructure as variable
-const Book = ({ img, title, author, getBookProp }) => {
+const Book = ({ img, title, author, getBookProp, id }) => {
+  // second component is not get id from first one
+  // we are not invoking it with onClick ={getBookProp(id)} and passing it as getSingleBook instead
+  const getSingleBook = () => {
+    getBookProp(id);
+  };
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={getBookProp}> Click this</button>
+      <button onClick={getSingleBook}> Click this</button>
       <h4>{author} </h4>
     </article>
   );
