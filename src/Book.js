@@ -1,7 +1,7 @@
 // events obj - common e.target -> refers to element with all its attributes
 // e.target.name -> refers to name = "" thing inside name attribute
 // e.target.value -> refers to value you put into the form, input, etc
-// e.preventDefault() to handle form submssion by ourself
+// e.preventDefault() to handle form submission by ourself
 
 //components
 // props are objects, it is only display when value is provided
