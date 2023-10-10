@@ -1,21 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { books } from "./books.js";
 
-const books = [
-  {
-    author: "Adam Wallace (Author), Andy Elkerton (Illustrator)",
-    title: "How to dinosaur",
-    img: "./amazonBookimg1.jpg",
-    id: 1,
-  },
-  {
-    author: "James Clear",
-    title: "Atomic Habits",
-    img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
-    id: 2,
-  },
-];
 // using jsx, always need to return single element (parent)
 // <></> or <React.Fragment></React.Fragment>
 // no class in react, its className
