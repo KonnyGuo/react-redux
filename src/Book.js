@@ -7,7 +7,7 @@
 // props are objects, it is only display when value is provided
 // {job, title, number} destructure in parameter
 // {job, title, number} = props destructure as variable
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, number }) => {
   // second component is not get id from first one
   // we are not invoking it with onClick ={getBookProp(id)} and passing it as getSingleBook instead
   // second method listed below
@@ -21,8 +21,8 @@ const Book = ({ img, title, author }) => {
       {/* <button onClick={getSingleBook}> Click this</button> */}
       {/* <button onClick={() => getBookProp(id)}> Click this</button> */}
       {/* approach 2 above */}
-
       <h4>{author} </h4>
+      <span className="number"> {`# ${number + 1}`} </span>
     </article>
   );
 };

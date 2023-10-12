@@ -17,12 +17,12 @@ function BookList() {
   // };
   return (
     <section className="booklist">
-      {books.map((book) => {
+      {books.map((book, index) => {
         // const { img, title, author, id } = book;
         // always remember key value to be put somewhere
         // return <Book img={img} title={title} author={author} key={id} />;
         // return <Book {...book} key={book.id} getBookProp={getBook} />;
-        return <Book {...book} key={book.id} />;
+        return <Book {...book} key={book.id} number={index} />;
       })}
     </section>
   );
