@@ -2,7 +2,7 @@ export const books = [
   {
     author: "Adam Wallace (Author), Andy Elkerton (Illustrator)",
     title: "How to dinosaur",
-    img: "./amazonBookimg1.jpg",
+    img: "./images/amazonBookimg1.jpg",
     id: 1,
   },
   {
