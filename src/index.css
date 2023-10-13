@@ -58,3 +58,9 @@ body {
   color: white;
   background: #c35600;
 }
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 4rem;
+}
