@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { books } from "./books.js";
@@ -16,15 +16,18 @@ function BookList() {
   //   return bookByID;
   // };
   return (
-    <section className="booklist">
-      {books.map((book, index) => {
-        // const { img, title, author, id } = book;
-        // always remember key value to be put somewhere
-        // return <Book img={img} title={title} author={author} key={id} />;
-        // return <Book {...book} key={book.id} getBookProp={getBook} />;
-        return <Book {...book} key={book.id} number={index} />;
-      })}
-    </section>
+    <Fragment>
+      <h1> Best Amazon Books </h1>
+      <section className="booklist">
+        {books.map((book, index) => {
+          // const { img, title, author, id } = book;
+          // always remember key value to be put somewhere
+          // return <Book img={img} title={title} author={author} key={id} />;
+          // return <Book {...book} key={book.id} getBookProp={getBook} />;
+          return <Book {...book} key={book.id} number={index} />;
+        })}
+      </section>
+    </Fragment>
   );
 }
 
